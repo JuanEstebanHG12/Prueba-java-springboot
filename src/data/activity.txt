@@ -1,0 +1,118 @@
+Be a codernnn
+ENUNCIADO DE LA PRUEBA DE DESEMPEÑO – SPRING BOOT
+TalentBoard – Sistema de Gestión de Procesos de Selección
+Contexto
+Muchas organizaciones gestionan sus procesos de selección utilizando hojas de cálculo, correos
+electrónicos, documentos compartidos y diferentes herramientas desconectadas entre sí.
+Esta situación genera problemas como:
+• Dificultad para centralizar la información de candidatos.
+• Pérdida de seguimiento sobre las vacantes abiertas.
+• Falta de trazabilidad durante los procesos de selección.
+• Duplicidad de postulaciones.
+• Errores en la programación de entrevistas.
+• Procesos lentos para la toma de decisiones.
+• Poca visibilidad sobre el estado de los candidatos.
+Para solucionar esta situación, se requiere desarrollar una plataforma llamada TalentBoard, cuyo
+objetivo es administrar vacantes, candidatos, postulaciones y entrevistas dentro de un único
+sistema.
+La solución deberá permitir gestionar el ciclo completo de un proceso de selección, desde la
+publicación de una vacante hasta la decisión final sobre los candidatos participantes.
+Objetivo de la prueba
+Diseñar, desarrollar y desplegar una solución funcional que permita administrar procesos de
+selección de talento.
+Be a codernnn
+La solución deberá demostrar la aplicación de los conocimientos adquiridos durante el módulo de
+Spring Boot, incluyendo persistencia de datos, lógica de negocio, seguridad, interfaces de usuario,
+documentación y despliegue.
+Be a codernnn
+Requerimientos funcionales
+1. Gestión de usuarios
+El sistema deberá permitir el registro y autenticación de usuario, cada usuario deberá tener
+un rol asignado.
+Roles mínimos:
+• Administrador.
+• Reclutador.
+• Candidato.
+Cada rol deberá contar con permisos acordes a sus responsabilidades dentro del sistema.
+2. Gestión de vacantes
+El sistema deberá permitir la administración de vacantes laborales, cada vacante deberá
+contener como mínimo:
+• Título.
+• Descripción.
+• Área o categoría.
+• Modalidad de trabajo.
+• Salario o rango salarial (opcional).
+• Fecha de publicación.
+• Estado.
+• Usuario responsable.
+El sistema deberá permitir:
+• Crear vacantes.
+• Consultar vacantes.
+• Actualizar información de vacantes.
+• Cambiar estados.
+• Visualizar el detalle de una vacante.
+Be a codernnn
+3. Gestión de postulaciones
+Los candidatos podrán postularse a las vacantes disponibles, cada postulación deberá
+almacenar información relacionada con:
+• Candidato.
+• Vacante.
+• Fecha de aplicación.
+• Estado actual del proceso.
+• Observaciones o comentarios asociados.
+El sistema deberá permitir consultar el historial y estado de las postulaciones realizadas.
+4. Gestión de entrevistas
+El sistema deberá permitir registrar entrevistas asociadas a las postulaciones, cada
+entrevista deberá incluir como mínimo:
+• Fecha.
+• Hora.
+• Tipo de entrevista.
+• Responsable.
+• Resultado.
+• Observaciones.
+El sistema deberá permitir administrar el ciclo de entrevistas dentro de cada proceso de
+selección.
+5. Seguimiento del proceso
+La solución deberá permitir realizar seguimiento al avance de cada candidato dentro de un
+proceso de selección.
+El coder deberá definir los estados necesarios para representar el flujo del proceso y
+garantizar la correcta transición entre ellos.
+Be a codernnn
+Reglas de negocio
+La solución deberá contemplar como mínimo las siguientes restricciones:
+• Un candidato no podrá postularse más de una vez a la misma vacante.
+• No se podrán recibir postulaciones para vacantes cerradas.
+• Las entrevistas no podrán programarse en fechas anteriores a la fecha actual.
+• Los usuarios únicamente podrán acceder a la información autorizada según su rol.
+• Los candidatos únicamente podrán visualizar la información relacionada con sus propias
+postulaciones.
+El coder podrán implementar reglas adicionales que consideren necesarias para fortalecer la
+solución.
+Be a codernnn
+Documentación
+El proyecto deberá incluir un archivo README que permita comprender y ejecutar la solución.
+La documentación deberá contener como mínimo:
+• Descripción del proyecto.
+• Tecnologías utilizadas.
+• Instrucciones de instalación.
+• Instrucciones de ejecución.
+• Variables de entorno requeridas.
+• Credenciales de prueba (si aplican).
+• Evidencias relevantes del funcionamiento.
+Entregables
+Cada participante deberá entregar:
+• Enlace al repositorio GitHub.
+• Archivo comprimido (.zip) del proyecto.
+• Documentación del proyecto.
+El archivo comprimido deberá contener únicamente los recursos necesarios para ejecutar y revisar
+la solución.
+Consideraciones importantes
+• El uso de herramientas de Inteligencia Artificial está permitido.
+• Todas las decisiones técnicas implementadas deberán poder ser explicadas y justificadas
+durante la sustentación.
+• No existe una única solución correcta para esta prueba.
+• Se valorará la capacidad de análisis, diseño, implementación y argumentación técnica.
+• Todo el código fuente deberá estar escrito en inglés.
+• La aplicación deberá encontrarse contenerizada mediante Docker.
+Be a codernnn
+¡Éxitos en esta prueba de desempeño!
