@@ -6,9 +6,6 @@ import java.time.LocalDate;
 public record ResponseUserDTO(
         String name,
         String lastName,
-        String email,
-        String role,
-        LocalDate createdAt,
-        LocalDate updatedAt
+        String email
 ) {
 }
