@@ -42,7 +42,7 @@ public class AuthService {
 
         //TODO: Send email
 
-        return new TokenResponse(token, refreshToken);
+        return new TokenResponse(token, refreshToken, user.getRole().name());
     }
 
     public TokenResponse login(LoginRequest loginRequest) {
@@ -56,7 +56,7 @@ public class AuthService {
                 .orElseThrow(() -> new UserNotFoundException("User not found"));
         var jwtToken = jwtService.generateToken(user);
         var refreshToken = jwtService.generateRefreshToken(user);
-        return new TokenResponse(jwtToken, refreshToken);
+        return new TokenResponse(jwtToken, refreshToken, user.getRole().name());
     }
 
 }

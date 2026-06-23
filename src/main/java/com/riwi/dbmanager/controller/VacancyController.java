@@ -1,6 +1,7 @@
 package com.riwi.dbmanager.controller;
 
 import com.riwi.dbmanager.dto.request.VacanciesRequest;
+import com.riwi.dbmanager.dto.request.VacancyStatusRequest;
 import com.riwi.dbmanager.dto.response.VacancyResponse;
 import com.riwi.dbmanager.service.VacanciesService;
 import jakarta.validation.Valid;
@@ -27,11 +28,24 @@ public class VacancyController {
         return vacanciesService.getAllVacancies();
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<VacancyResponse> getVacancyById(@PathVariable Long id) {
+        return ResponseEntity.ok(vacanciesService.getVacancyById(id));
+    }
+
     @PatchMapping("/{id}")
     public ResponseEntity<VacancyResponse> updateVacancy(
             @PathVariable Long id,
             @RequestBody VacanciesRequest vacanciesRequest
     ) {
         return ResponseEntity.ok(vacanciesService.updateVacancies(vacanciesRequest, id));
+    }
+
+    @PatchMapping("/{id}/status")
+    public ResponseEntity<VacancyResponse> changeStatus(
+            @PathVariable Long id,
+            @Valid @RequestBody VacancyStatusRequest request
+    ) {
+        return ResponseEntity.ok(vacanciesService.changeStatus(id, request));
     }
 }

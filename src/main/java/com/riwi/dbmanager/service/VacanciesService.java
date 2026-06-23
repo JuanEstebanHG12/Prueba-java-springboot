@@ -1,6 +1,7 @@
 package com.riwi.dbmanager.service;
 
 import com.riwi.dbmanager.dto.request.VacanciesRequest;
+import com.riwi.dbmanager.dto.request.VacancyStatusRequest;
 import com.riwi.dbmanager.dto.response.VacancyResponse;
 import com.riwi.dbmanager.exception.BusinessException;
 import com.riwi.dbmanager.exception.UserNotFoundException;
@@ -16,7 +17,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -68,8 +68,18 @@ public class VacanciesService {
         return vacanciesMapper.toVacanciesRequest(vacanciesRepository.save(vacancy));
     }
 
-    public Optional<Vacancy> getVacanciesById(Long id) {
-        return vacanciesRepository.findById(id);
+    @Transactional
+    public VacancyResponse changeStatus(Long id, VacancyStatusRequest request) {
+        Vacancy vacancy = vacanciesRepository.findById(id)
+                .orElseThrow(() -> new VacancyNotFoundException("Vacancy not found"));
+        vacancy.setStatus(request.status());
+        return vacanciesMapper.toVacanciesRequest(vacanciesRepository.save(vacancy));
+    }
+
+    public VacancyResponse getVacancyById(Long id) {
+        Vacancy vacancy = vacanciesRepository.findById(id)
+                .orElseThrow(() -> new VacancyNotFoundException("Vacancy not found"));
+        return vacanciesMapper.toVacanciesRequest(vacancy);
     }
 
     public void deleteVacancies(Long id) {
