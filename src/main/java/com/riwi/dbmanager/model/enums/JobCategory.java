@@ -1,0 +1,24 @@
+package com.riwi.dbmanager.model.enums;
+
+public enum JobCategory {
+    SOFTWARE_DEVELOPMENT,
+    DATA_ANALYTICS,
+    CYBERSECURITY,
+    DEVOPS,
+    QUALITY_ASSURANCE,
+    UI_UX_DESIGN,
+    PROJECT_MANAGEMENT,
+    HUMAN_RESOURCES,
+    MARKETING,
+    SALES,
+    CUSTOMER_SERVICE,
+    FINANCE,
+    ACCOUNTING,
+    LEGAL,
+    OPERATIONS,
+    LOGISTICS,
+    PROCUREMENT,
+    EDUCATION,
+    HEALTHCARE,
+    ADMINISTRATION
+}
